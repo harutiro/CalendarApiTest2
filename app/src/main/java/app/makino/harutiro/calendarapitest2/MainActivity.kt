@@ -45,7 +45,9 @@ class MainActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedList
         findViewById<Button>(R.id.button).setOnClickListener{
             CalendarQuickstart.main()
 
-            //onClick()
+//            CalendarQuickstart.main()
+
+            onClick()
         }
 
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
