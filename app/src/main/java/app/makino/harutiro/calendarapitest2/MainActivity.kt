@@ -43,9 +43,7 @@ class MainActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedList
         setContentView(R.layout.activity_main)
 
         findViewById<Button>(R.id.button).setOnClickListener{
-            CalendarQuickstart.main()
-
-//            CalendarQuickstart.main()
+            //CalendarQuickstart.main()
 
             onClick()
         }
