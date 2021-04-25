@@ -2,6 +2,7 @@ package app.makino.harutiro.calendarapitest2
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
@@ -42,10 +43,9 @@ class MainActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedList
         setContentView(R.layout.activity_main)
 
         findViewById<Button>(R.id.button).setOnClickListener{
+            CalendarQuickstart.main()
 
-//            CalendarQuickstart.main()
-
-            onClick()
+            //onClick()
         }
 
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -75,9 +75,16 @@ class MainActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedList
                 try {
                     val account: GoogleSignInAccount = result.signInAccount as GoogleSignInAccount
                     val idToken = account.idToken
+
+                    Log.d("debug2", "${account.displayName}")
+                    Log.d("debug2", idToken.toString())
+
                 } catch (e: ApiException) {
-//                    Logger.error("error",e.toString())
+                    Log.e("error",e.toString())
                 }
+            }else {
+                Log.d("debug2", "else")
+
             }
         }
     }
@@ -97,6 +104,7 @@ object CalendarQuickstart {
     // アクセスする権限のスコープ
     private val SCOPES: List<String> = Collections.singletonList(CalendarScopes.CALENDAR_READONLY)
 
+    //TODO: 認証情報jsonの関係を調べる。
     // 認証情報
     private const val CREDENTIALS_FILE_PATH = "/credentials.json"
 
