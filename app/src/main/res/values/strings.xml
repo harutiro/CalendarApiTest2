@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">CalendarApiTest2</string>
     <string name="gcp_client_id">{"installed":{"client_id":"438184272791-7h4kvbsk20l6da8ki5tc5onllpshnu03.apps.googleusercontent.com","project_id":"qualified-cacao-310316","auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://oauth2.googleapis.com/token","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs","redirect_uris":["urn:ietf:wg:oauth:2.0:oob","http://localhost"]}}</string>
+    <string name="default_web_client_id">438184272791-3tqb57d2rnq7u0ftkpsaqejt85pjpbd4.apps.googleusercontent.com</string>
 </resources>

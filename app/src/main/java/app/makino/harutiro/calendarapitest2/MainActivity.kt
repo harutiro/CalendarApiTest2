@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedList
         }
 
         findViewById<Button>(R.id.button2).setOnClickListener{
-            val intent = Intent(this, test2Activity::class.java)
+            val intent = Intent(this, Test3Activity::class.java)
             startActivity(intent)
 
         }
