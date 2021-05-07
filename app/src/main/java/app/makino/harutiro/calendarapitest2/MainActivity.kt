@@ -52,12 +52,12 @@ class MainActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedList
 
 
 
-//            runBlocking(Dispatchers.IO){
-//                CalendarQuickstart.main()
-//            }
+            runBlocking(Dispatchers.IO){
+                CalendarQuickstart.main()
+            }
 
 
-            onClick()
+//            onClick()
         }
 
         findViewById<Button>(R.id.button2).setOnClickListener{
@@ -142,7 +142,8 @@ object CalendarQuickstart {
                 .build()
         // ローカルサーバを8888ポートで立てる
         val receiver = LocalServerReceiver.Builder().setPort(8888).build()
-        return AuthorizationCodeInstalledApp(flow, receiver).authorize("user")
+        //BAG: java.lang.NoClassDefFoundError: Failed resolution of: Ljava/awt/Desktop;
+        return AuthorizationCodeInstalledApp(flow, receiver).authorize("user").setAccessToken("")
     }
 
     // メイン関数
